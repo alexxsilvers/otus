@@ -1,0 +1,29 @@
+<input> 3 8
+; r4 used for store result
+load =0
+store 4
+read 1
+read 2
+
+; find the smallest factor
+load 2
+sub 1
+jgtz loop
+load 2
+store 3
+load 1
+store 2
+load 3
+store 1
+
+loop:
+	load 4
+	add 2
+	store 4
+	load 1
+	sub =1
+	store 1
+jgtz loop
+
+write 4
+halt

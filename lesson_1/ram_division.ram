@@ -1,0 +1,37 @@
+<input> 5 5
+load =0
+store 3
+read 1
+read 2
+
+loop:
+	load 1
+	sub 2
+	store 5
+	jgtz next_loop
+	jz break
+	jmp end
+
+end:
+	load 1
+	store 4
+	jmp exit
+
+next_loop:
+	store 1
+	load 3
+	add =1
+	store 3
+	jmp loop
+
+break:
+	store 4
+	load 3
+	add =1
+	store 3
+	jmp exit
+
+exit:
+	write 3
+	write 4
+	halt
